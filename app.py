@@ -37,7 +37,7 @@ app.config['SAVE_FOLDER_PDF'] = SAVE_FOLDER_PDF
 app.config['SAVE_FOLDER_EXCEL'] = SAVE_FOLDER_EXCEL
 
 mysql = MySQL(app)
-
+# cmt
 def login_required(func): # need for some router
     @functools.wraps(func)
     def secure_function(*args, **kwargs):

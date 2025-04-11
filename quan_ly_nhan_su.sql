@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 25, 2022 at 03:14 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.10
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th4 11, 2025 lúc 07:52 PM
+-- Phiên bản máy phục vụ: 11.7.2-MariaDB
+-- Phiên bản PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,15 +18,15 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `quan_ly_nhan_su`
+-- Cơ sở dữ liệu: `quan_ly_nhan_su`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `qlnv_chamcong`
+-- Cấu trúc bảng cho bảng `qlnv_chamcong`
 --
-
+-- new DatA
 CREATE TABLE `qlnv_chamcong` (
   `id` int(11) NOT NULL,
   `MaNV` varchar(8) NOT NULL,
@@ -36,34 +36,20 @@ CREATE TABLE `qlnv_chamcong` (
   `OT` tinyint(1) NOT NULL,
   `ThoiGianLamViec` time NOT NULL,
   `ThoiGian_thap_phan` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Dumping data for table `qlnv_chamcong`
+-- Đang đổ dữ liệu cho bảng `qlnv_chamcong`
 --
 
 INSERT INTO `qlnv_chamcong` (`id`, `MaNV`, `Ngay`, `GioVao`, `GioRa`, `OT`, `ThoiGianLamViec`, `ThoiGian_thap_phan`) VALUES
-(54, 'MNV03', '2022-12-17', '07:30:00', '11:50:00', 0, '04:20:00', 4.3),
-(55, 'MNV03', '2022-12-11', '07:30:00', '11:30:00', 0, '04:00:00', 4),
-(60, 'MNV01', '2022-11-02', '07:30:00', '11:30:00', 0, '04:00:00', 4),
-(62, 'MNV03', '2022-11-01', '07:30:00', '10:30:00', 0, '03:00:00', 3),
-(63, 'MNV02', '2022-12-01', '07:30:00', '11:30:00', 0, '04:00:00', 4),
-(64, 'MNV01', '2022-11-01', '07:30:00', '11:30:00', 0, '04:00:00', 4),
-(65, 'MNV03', '2022-12-03', '07:30:00', '11:50:00', 0, '04:20:00', 4.3),
-(66, 'MNV03', '2022-12-04', '07:30:00', '11:30:00', 0, '04:00:00', 4),
-(67, 'MNV03', '2022-12-04', '13:30:00', '17:00:00', 0, '03:30:00', 3.5),
-(68, 'MNV02', '2022-12-02', '07:30:00', '11:50:00', 0, '04:20:00', 4.3),
-(69, 'MNV02', '2022-12-03', '07:30:00', '11:50:00', 0, '04:20:00', 4.3),
-(70, 'MNV03', '2022-10-01', '07:30:00', '11:00:00', 0, '03:30:00', 3.5),
-(71, 'MNV03', '2022-10-02', '07:30:00', '11:30:00', 0, '04:00:00', 4),
-(72, 'MNV03', '2022-12-03', '07:30:00', '10:15:00', 0, '02:45:00', 2.8),
-(73, 'MNV02', '2022-11-01', '07:30:00', '11:50:00', 0, '04:20:00', 4.3),
-(74, 'MNV02', '2022-11-18', '07:30:00', '11:50:00', 0, '04:20:00', 4.3),
-(75, 'MNV02', '2022-12-25', '16:14:29', '16:21:13', 0, '00:06:44', 0.1),
-(76, 'MNV01', '2022-12-25', '20:49:26', '20:52:22', 0, '00:02:56', 0);
+(77, 'NV004', '2025-03-29', '16:57:35', '16:57:49', 0, '00:00:14', 0),
+(78, 'NV001', '2025-04-03', '20:33:43', '20:54:58', 0, '00:21:15', 0.4),
+(79, 'NV004', '2025-04-03', '21:21:01', '21:34:33', 0, '00:13:32', 0.2),
+(80, 'NV004', '2025-04-10', '13:59:50', '13:59:52', 0, '00:00:02', 0);
 
 --
--- Triggers `qlnv_chamcong`
+-- Bẫy `qlnv_chamcong`
 --
 DELIMITER $$
 CREATE TRIGGER `before_insert_to_cham_cong` BEFORE INSERT ON `qlnv_chamcong` FOR EACH ROW BEGIN
@@ -97,7 +83,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `qlnv_chamcongngay`
+-- Cấu trúc bảng cho bảng `qlnv_chamcongngay`
 --
 
 CREATE TABLE `qlnv_chamcongngay` (
@@ -137,25 +123,21 @@ CREATE TABLE `qlnv_chamcongngay` (
   `Ngay29` float NOT NULL DEFAULT -1,
   `Ngay30` float NOT NULL DEFAULT -1,
   `Ngay31` float NOT NULL DEFAULT -1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Dumping data for table `qlnv_chamcongngay`
+-- Đang đổ dữ liệu cho bảng `qlnv_chamcongngay`
 --
 
 INSERT INTO `qlnv_chamcongngay` (`MaChamCong`, `MaNV`, `Nam`, `Thang`, `SoNgayThang`, `Ngay1`, `Ngay2`, `Ngay3`, `Ngay4`, `Ngay5`, `Ngay6`, `Ngay7`, `Ngay8`, `Ngay9`, `Ngay10`, `Ngay11`, `Ngay12`, `Ngay13`, `Ngay14`, `Ngay15`, `Ngay16`, `Ngay17`, `Ngay18`, `Ngay19`, `Ngay20`, `Ngay21`, `Ngay22`, `Ngay23`, `Ngay24`, `Ngay25`, `Ngay26`, `Ngay27`, `Ngay28`, `Ngay29`, `Ngay30`, `Ngay31`) VALUES
-(41, 'MNV03', 2022, 12, 31, -1, -1, 7.1, 7.5, -1, -1, -1, -1, -1, -1, 4, -1, -1, -1, -1, -1, 4.3, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1),
-(45, 'MNV01', 2022, 11, 30, 4, 4, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1),
-(47, 'MNV03', 2022, 11, 30, 3, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1),
-(48, 'MNV02', 2022, 12, 31, 4, 4.3, 4.3, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0.1, -1, -1, -1, -1, -1, -1),
-(49, 'MNV03', 2022, 10, 31, 3.5, 4, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1),
-(50, 'MNV02', 2022, 11, 30, 4.3, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 4.3, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1),
-(51, 'MNV01', 2022, 12, 31, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1);
+(52, 'NV004', '2025', 3, 31, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1),
+(53, 'NV001', '2025', 4, 30, -1, -1, 0.4, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1),
+(54, 'NV004', '2025', 4, 30, -1, -1, 0.2, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `qlnv_chamcongthang`
+-- Cấu trúc bảng cho bảng `qlnv_chamcongthang`
 --
 
 CREATE TABLE `qlnv_chamcongthang` (
@@ -174,21 +156,20 @@ CREATE TABLE `qlnv_chamcongthang` (
   `T10` float NOT NULL DEFAULT -1,
   `T11` float NOT NULL DEFAULT -1,
   `T12` float NOT NULL DEFAULT -1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Dumping data for table `qlnv_chamcongthang`
+-- Đang đổ dữ liệu cho bảng `qlnv_chamcongthang`
 --
 
 INSERT INTO `qlnv_chamcongthang` (`id`, `MaNV`, `Nam`, `T1`, `T2`, `T3`, `T4`, `T5`, `T6`, `T7`, `T8`, `T9`, `T10`, `T11`, `T12`) VALUES
-(21, 'MNV03', 2022, -1, -1, -1, -1, -1, -1, -1, -1, -1, 7.5, 3, 22.9),
-(25, 'MNV01', 2022, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 8, 0),
-(27, 'MNV02', 2022, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 8.6, 12.7);
+(28, 'NV004', '2025', -1, -1, 0, 0.2, -1, -1, -1, -1, -1, -1, -1, -1),
+(29, 'NV001', '2025', -1, -1, -1, 0.4, -1, -1, -1, -1, -1, -1, -1, -1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `qlnv_chamcongtongketthang`
+-- Cấu trúc bảng cho bảng `qlnv_chamcongtongketthang`
 --
 
 CREATE TABLE `qlnv_chamcongtongketthang` (
@@ -200,23 +181,19 @@ CREATE TABLE `qlnv_chamcongtongketthang` (
   `SoNgayDiVang` int(11) NOT NULL DEFAULT 0,
   `SoNgayTangCa` int(11) NOT NULL DEFAULT 0,
   `TongSoNgay` int(11) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Dumping data for table `qlnv_chamcongtongketthang`
+-- Đang đổ dữ liệu cho bảng `qlnv_chamcongtongketthang`
 --
 
 INSERT INTO `qlnv_chamcongtongketthang` (`Id`, `MaNhanVien`, `Nam`, `Thang`, `SoNgayDiLam`, `SoNgayDiVang`, `SoNgayTangCa`, `TongSoNgay`) VALUES
-(19, 'MNV03', 2022, 12, 4, 23, 0, 4),
-(23, 'MNV01', 2022, 11, 2, 24, 0, 2),
-(24, 'MNV03', 2022, 11, 1, 25, 0, 1),
-(25, 'MNV02', 2022, 12, 4, 23, 0, 4),
-(26, 'MNV03', 2022, 10, 2, 24, 0, 2),
-(27, 'MNV02', 2022, 11, 2, 24, 0, 2),
-(28, 'MNV01', 2022, 12, 1, 26, 0, 1);
+(29, 'NV004', '2025', 3, 1, 25, 0, 1),
+(30, 'NV001', '2025', 4, 1, 25, 0, 1),
+(31, 'NV004', '2025', 4, 2, 24, 0, 2);
 
 --
--- Triggers `qlnv_chamcongtongketthang`
+-- Bẫy `qlnv_chamcongtongketthang`
 --
 DELIMITER $$
 CREATE TRIGGER `delete_tongket_luong` BEFORE DELETE ON `qlnv_chamcongtongketthang` FOR EACH ROW BEGIN
@@ -380,27 +357,28 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `qlnv_chucvu`
+-- Cấu trúc bảng cho bảng `qlnv_chucvu`
 --
 
 CREATE TABLE `qlnv_chucvu` (
-  `MaCV` varchar(8) COLLATE utf8_unicode_ci NOT NULL,
-  `TenCV` varchar(20) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `MaCV` varchar(8) NOT NULL,
+  `TenCV` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 --
--- Dumping data for table `qlnv_chucvu`
+-- Đang đổ dữ liệu cho bảng `qlnv_chucvu`
 --
 
 INSERT INTO `qlnv_chucvu` (`MaCV`, `TenCV`) VALUES
 ('GD', 'Giám đốc'),
 ('NV', 'Nhân viên'),
+('TP', 'Trưởng phòng'),
 ('TTS', 'Thực tập sinh');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `qlnv_congty`
+-- Cấu trúc bảng cho bảng `qlnv_congty`
 --
 
 CREATE TABLE `qlnv_congty` (
@@ -411,19 +389,19 @@ CREATE TABLE `qlnv_congty` (
   `SoDienThoai` varchar(11) NOT NULL,
   `MaSoDoanhNghiep` varchar(20) NOT NULL,
   `NgayThanhLap` date NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Dumping data for table `qlnv_congty`
+-- Đang đổ dữ liệu cho bảng `qlnv_congty`
 --
 
 INSERT INTO `qlnv_congty` (`ID`, `TenCongTy`, `DiaChi`, `LogoPath`, `SoDienThoai`, `MaSoDoanhNghiep`, `NgayThanhLap`) VALUES
-(1, 'Công ty tư vấn giải pháp phần mềm quản lý nhân sự', '334 Đ. Nguyễn Trãi, Thanh Xuân Trung, Thanh Xuân, Hà Nội', 'web/img/favicon.png', '0986259999', '0869886889', '2022-12-18');
+(1, 'Công ty đa ngành PTIT', 'Km10 Đ. Nguyễn Trãi, P. Mộ Lao, Hà Đông, Hà Nội', 'web/img/favicon.png', '0123456789', '01234543210', '2025-03-01');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `qlnv_hopdong`
+-- Cấu trúc bảng cho bảng `qlnv_hopdong`
 --
 
 CREATE TABLE `qlnv_hopdong` (
@@ -433,52 +411,35 @@ CREATE TABLE `qlnv_hopdong` (
   `NgayBatDau` date NOT NULL,
   `NgayKetThuc` date DEFAULT NULL,
   `GhiChu` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `qlnv_hopdong`
---
-
-INSERT INTO `qlnv_hopdong` (`id`, `MaHopDong`, `LoaiHopDong`, `NgayBatDau`, `NgayKetThuc`, `GhiChu`) VALUES
-(1, 'MHDMN11', 'Nhân viên', '2022-12-13', NULL, 'Hợp đồng cho nhân viên Nguyễn Quang Minh - MNN01'),
-(2, 'MHD01', 'Thực tập sinh', '2022-10-01', NULL, 'Hợp đồng cho thực tập sinh Dương Văn Nam - MNV01'),
-(3, 'MHD02', 'Thực tập sinh', '2022-11-02', NULL, 'Hợp đồng cho thực tập sinh Lã Đức Nam - MNV02'),
-(4, 'MHD03', 'Thực tập sinh', '2022-11-02', NULL, 'Hợp đồng cho thực tập sinh Phạm Hồng Nghĩa - MNV03'),
-(5, 'MHD04', 'Giám đốc', '2022-12-01', NULL, 'Hợp đồng thuê giám đốc'),
-(6, 'MHD05', 'Thực tập sinh', '2022-12-01', NULL, 'Hợp đồng thực tập sinh cho Nguyễn Khắc Huy'),
-(7, 'MHD06', 'Nhân viên', '2022-10-04', NULL, 'Hợp đồng nhân viên cho Phạm Như Khoa'),
-(8, 'MHD07', 'Nhân viên', '2022-10-04', NULL, 'Hợp đồng nhân viên cho Vũ Mai Anh'),
-(9, 'MHD08', 'Nhân viên', '2022-10-10', NULL, 'Hợp đồng nhân viên cho Nguyễn Thị Cẩm Tiên'),
-(10, 'HDMNV10', 'Nhân viên', '2022-12-13', NULL, 'Hợp đồng nhân viên cho Lê Tài Linh'),
-(11, 'HDMNV12', 'Thực tập sinh', '2022-12-13', NULL, 'Hợp đồng thực tập sinh cho Trần Hoàng Anh');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `qlnv_imagedata`
+-- Cấu trúc bảng cho bảng `qlnv_imagedata`
 --
 
 CREATE TABLE `qlnv_imagedata` (
   `ID_image` varchar(40) NOT NULL,
   `PathToImage` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Dumping data for table `qlnv_imagedata`
+-- Đang đổ dữ liệu cho bảng `qlnv_imagedata`
 --
 
 INSERT INTO `qlnv_imagedata` (`ID_image`, `PathToImage`) VALUES
-('Image_Profile_MNV01', 'web/img/Image_Profile_MNV01.jpg'),
-('Image_Profile_MNV02', 'web/img/Image_Profile_MNV02.gif'),
-('Image_Profile_MNV03', 'web/img/Image_Profile_MNV03.jpg'),
-('Image_Profile_MNV04', 'web/img/Image_Profile_MNV04.jpg'),
+('Image_Profile_NV000', 'web/img/Image_Profile_NV000.jpg'),
+('Image_Profile_NV001', 'web/img/Image_Profile_NV001.jpg'),
+('Image_Profile_NV002', 'web/img/Image_Profile_NV002.jpg'),
+('Image_Profile_NV003', 'web/img/Image_Profile_NV003.jpg'),
 ('logo_web', 'web/img/favicon.png'),
 ('none_image_profile', 'web/img/No_Image.png');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `qlnv_luong`
+-- Cấu trúc bảng cho bảng `qlnv_luong`
 --
 
 CREATE TABLE `qlnv_luong` (
@@ -491,72 +452,63 @@ CREATE TABLE `qlnv_luong` (
   `SoTienThuong` double NOT NULL DEFAULT 0,
   `SoTienPhat` double NOT NULL DEFAULT 0,
   `TongSoTien` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Dumping data for table `qlnv_luong`
+-- Đang đổ dữ liệu cho bảng `qlnv_luong`
 --
 
 INSERT INTO `qlnv_luong` (`id`, `MaNV`, `Nam`, `Thang`, `LuongCoDinh`, `LuongChamCong`, `SoTienThuong`, `SoTienPhat`, `TongSoTien`) VALUES
-(6, 'MNV03', 2022, 12, 1000000, 125000, 20000, 10000, 135000),
-(7, 'MNV01', 2022, 11, 1000000, 45000, 0, 0, 45000),
-(8, 'MNV03', 2022, 11, 1000000, 17000, 0, 0, 17000),
-(9, 'MNV02', 2022, 12, 1000000, 71000, 10000, 0, 81000),
-(10, 'MNV03', 2022, 10, 1000000, 45000, 0, 0, 45000),
-(11, 'MNV02', 2022, 11, 1000000, 51000, 0, 0, 51000),
-(12, 'MNV01', 2022, 12, 1000000, 0, 0, 0, 0);
+(13, 'NV004', '2025', 3, 5000000, 0, 0, 0, 0),
+(14, 'NV001', '2025', 4, 15000000, 0, 0, 0, 0),
+(15, 'NV004', '2025', 4, 5000000, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `qlnv_nhanvien`
+-- Cấu trúc bảng cho bảng `qlnv_nhanvien`
 --
 
 CREATE TABLE `qlnv_nhanvien` (
-  `MaNhanVien` varchar(8) COLLATE utf8_unicode_ci NOT NULL,
-  `MaChucVu` varchar(8) COLLATE utf8_unicode_ci NOT NULL,
-  `MaPhongBan` varchar(8) COLLATE utf8_unicode_ci NOT NULL,
+  `MaNhanVien` varchar(8) NOT NULL,
+  `MaChucVu` varchar(8) NOT NULL,
+  `MaPhongBan` varchar(8) NOT NULL,
   `Luong` double NOT NULL,
-  `GioiTinh` varchar(4) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Nam',
-  `MaHD` varchar(8) COLLATE utf8_unicode_ci NOT NULL,
-  `TenNV` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `GioiTinh` varchar(4) NOT NULL DEFAULT 'Nam',
+  `MaHD` varchar(8) NOT NULL,
+  `TenNV` varchar(50) NOT NULL,
   `NgaySinh` date NOT NULL,
-  `NoiSinh` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `SoCMT` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `DienThoai` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `DiaChi` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
-  `Email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `TTHonNhan` varchar(20) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Độc thân',
-  `DanToc` varchar(10) COLLATE utf8_unicode_ci DEFAULT 'Kinh',
-  `MATDHV` varchar(8) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `NoiSinh` varchar(100) NOT NULL,
+  `SoCMT` varchar(20) NOT NULL,
+  `DienThoai` varchar(20) NOT NULL,
+  `DiaChi` varchar(250) NOT NULL,
+  `Email` varchar(50) NOT NULL,
+  `TTHonNhan` varchar(20) NOT NULL DEFAULT 'Độc thân',
+  `DanToc` varchar(10) DEFAULT 'Kinh',
+  `MATDHV` varchar(8) DEFAULT NULL,
   `NgayCMND` date DEFAULT NULL,
-  `NoiCMND` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `BHYT` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
-  `BHXH` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
-  `ID_profile_image` varchar(40) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'none_image_profile'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `NoiCMND` varchar(50) DEFAULT NULL,
+  `BHYT` varchar(15) NOT NULL,
+  `BHXH` varchar(15) NOT NULL,
+  `ID_profile_image` varchar(40) NOT NULL DEFAULT 'none_image_profile'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 --
--- Dumping data for table `qlnv_nhanvien`
+-- Đang đổ dữ liệu cho bảng `qlnv_nhanvien`
 --
 
 INSERT INTO `qlnv_nhanvien` (`MaNhanVien`, `MaChucVu`, `MaPhongBan`, `Luong`, `GioiTinh`, `MaHD`, `TenNV`, `NgaySinh`, `NoiSinh`, `SoCMT`, `DienThoai`, `DiaChi`, `Email`, `TTHonNhan`, `DanToc`, `MATDHV`, `NgayCMND`, `NoiCMND`, `BHYT`, `BHXH`, `ID_profile_image`) VALUES
-('MNN01', 'NV', 'MPB05', 1300000, 'Nam', 'MHDMN11', 'Nguyễn Quang Minh', '2002-12-12', 'Thanh Vân - Hiệp Hòa - Bắc Giang', '001205068139', '0965513786', 'Làng sinh viên Hacinco - Nhân Chính - Thanh Xuân - Hà Nội', 'nguyenquangminh@gmail.com', 'Độc thân', 'Kinh', 'SV002', '2019-03-10', 'Hiệp Hòa', 'SV40101206185', '0118059003', 'none_image_profile'),
-('MNV01', 'TTS', 'MPB01', 1000000, 'Nam', 'MHD01', 'Dương Văn Nam', '2002-01-07', 'Hiệp Hòa - Bắc Giang', '001215387168', '0877625245', 'Hiệp Hòa - Bắc Giang', 'namdv@gmail.com', 'Độc thân', 'Kinh', 'SV001', '2019-11-30', 'Hiệp Hòa - Bắc Giang', 'SV40101238294', '0118128311', 'Image_Profile_MNV01'),
-('MNV02', 'TTS', 'MPB02', 1000000, 'Nam', 'MHD02', 'Lã Đức Nam', '2002-11-28', 'Hà Tây', '001202035197', '0945549876', 'Làng sinh viên Hacinco - Nhân Chính - Thanh Xuân - Hà Nội - Việt Nam', 'namld@gmail.com', 'Độc thân', 'Kinh', 'SV001', '2020-08-03', 'Hà Nội', 'SV401985718', '0118157171', 'Image_Profile_MNV02'),
-('MNV03', 'TTS', 'MPB01', 1000000, 'Nam', 'MHD03', 'Phạm Hồng Nghĩa', '2002-04-04', 'Phú Thọ', '123456789', '0822655245', '36 Vũ Trọng Phụng, Thanh Xuân Trung, Thanh Xuân, Hà Nội', 'nghiaph@gmail.com', 'Đã kết hôn', 'Kinh', 'SV001', '2020-12-12', 'Phú Thọ', 'SV40101135729', '0811002892', 'Image_Profile_MNV03'),
-('MNV04', 'GD', 'PBGD', 10000000, 'Nam', 'MHD04', 'Phạm Nhật Vượng', '1968-08-05', 'Phù Lưu, Lộc Hà, Hà Tĩnh', '000827826195', '0877865245', 'Phù Lưu, Lộc Hà, Hà Tĩnh', 'vuongpn@gmail.com', 'Đã kết hôn', 'Kinh', 'TS001', '1986-10-10', 'Phù Lưu, Lộc Hà, Hà Tĩnh', '', '', 'Image_Profile_MNV04'),
-('MNV05', 'TTS', 'MPB02', 900000, 'Nam', 'MHD05', 'Nguyễn Khắc Huy', '2002-10-01', 'Đan Phượng - Hà Nội', '001297385197', '0877265456', 'Đan Phượng - Hà Nội', 'huynk@gmail.com', 'Độc thân', 'Kinh', 'SV001', '2020-03-03', 'Đan Phượng', '', '', 'none_image_profile'),
-('MNV06', 'NV', 'MPB03', 1500000, 'Nam', 'MHD06', 'Phạm Như Khoa', '2002-05-05', 'Hoài Đức - Hà Nội', '123456789', '0556276648', 'Hoài Đức - Hà Nội', 'khoapn@gmail.com', 'Độc thân', 'Kinh', 'SV001', '2020-08-09', 'Hoài Đức', '', '', 'none_image_profile'),
-('MNV07', 'NV', 'MPB03', 0.15, 'Nữ', 'MHD07', 'Vu Mai Anh', '2002-08-05', '', '123456789', '0655745341', 'Ha Noi', 'anhvm@gmail.com', 'Độc thân', 'Kinh', 'SV002', NULL, NULL, '', '', 'none_image_profile'),
-('MNV08', 'NV', 'MPB02', 700000, 'Nữ', 'MHD08', 'Nguyễn Thị Cẩm Tiên', '2002-09-09', '', '123456789', '0877567893', 'Hà Nội', 'tiennc@gmail.com', 'Độc thân', 'Kinh', 'SV002', '2019-05-03', 'Bắc Giang', '', '', 'none_image_profile'),
-('MNV10', 'NV', 'MPB01', 20000000, 'Nam', 'HDMNV10', 'Lê Tài Linh', '2002-12-12', 'Thôn Xuân Tân - Xuân Hưng - Thọ Xuân - Thanh Hoá  - Việt Nam', '001206064297', '0916578134', 'Làng sinh viên Hacinco - Nhân Chính - Thanh Xuân - Hà Nội - Việt Nam', 'linhle@gmail.com', 'Độc thân', 'Kinh', 'SV002', '2020-03-18', 'Thọ Xuân', 'SV40101208765', '0118000001', 'none_image_profile'),
-('MNV12', 'NV', 'MPB05', 1000000, 'Nam', 'HDMNV12', 'Trần Hoàng Anh', '2002-02-14', 'Đồng Họa - Xã Vạn Hòa - Huyện Nông Cống - Thanh Hóa', '001234957163', '0945875315', 'Làng sinh viên Hacinco - Nhân Chính - Thanh Xuân - Hà Nội - Việt Nam', 'tranhaicau@gmail.com', 'Độc thân', 'Kinh', 'SV001', '2019-04-05', 'Thanh Hóa', 'SV401975831', '0118648251', 'none_image_profile'),
-('MNV24', 'NV', 'MPB02', 950000, 'Nam', 'HDMNV24', 'Phan Quốc Minh', '2002-07-07', 'Khánh Hòa', '1234965137', '0856865245', 'Ha Noi', 'minhpq@gmail.com', 'Đã kết hôn', 'Kinh', 'SV003', '2020-07-07', 'Khánh Hòa', 'SV401658965', '118046701', 'none_image_profile'),
-('MNV36', 'NV', 'MPB03', 900000, 'Nam', 'HDMNV36', 'Nguyễn Quang Minh', '2002-11-30', 'Thái Bình', '1262596315', '0558466648', 'Ha Noi', 'nqm@gmail.com', 'Độc thân', 'Kinh', 'None', '2020-07-07', 'Thái Bình', 'SV401658583', '118124001', 'none_image_profile');
+('NV000', 'GD', 'PBGD', 50000000, 'Nam', 'HD000', 'Trần Chủ Tịch', '1999-12-12', 'Phú Lạc - Đại Từ - Thái Nguyên', '019204555442', '0336258741', 'Hà Đông - Hà Nội', 'Tichct@gmail.com', 'Độc thân', 'Kinh', 'TS001', '2021-05-21', 'Hà Đông', '0123456445', '01122556998', 'Image_Profile_NV000'),
+('NV001', 'NV', 'MPB02', 15000000, 'Nam', 'HD001', 'Hoàng Huy Phong', '2001-03-31', 'Phú Xuyên - Đại Từ - Thái Nguyên', '019204011999', '0333986331', 'Yên Xá - Tân Triều - Thanh Trì - Hà Nội', 'PhongHH@gmail.com', 'Đã kết hôn', 'Kinh', 'TNKHMTTT', '2022-05-14', 'Đại Từ', '0123456789', '01122334455', 'Image_Profile_NV001'),
+('NV002', 'GD', 'PBGD', 25000000, 'Nữ', 'HD002', 'Vũ Thanh Vân', '1996-05-12', 'Nguyễn Trãi - Hà Đông - Hà Nội', '019996336552', '0333986442', 'tp Hồ Chí Minh', 'VanVT@gmail.com', 'Độc thân', 'Kinh', 'TS001', '2021-05-14', 'Hà Đông', '0123456798', '01122336622', 'Image_Profile_NV002'),
+('NV003', 'NV', 'MPB05', 20000000, 'Nam', 'HD003', 'Nguyễn Đức Cường', '1989-11-12', 'Uông Bí - Quảng Ninh', '019989369852', '0334568923', 'Hạ Long - Quang Ninh', 'denVau@gmail.com', 'Đã kết hôn', 'Tày', 'TNKHMTTT', '2021-06-05', 'Uông Bí', '0123456546', '01122556623', 'Image_Profile_NV003'),
+('NV004', 'TTS', 'MPB02', 5000000, 'Nam', 'HD004', 'Nguyễn Quang Huy', '2004-01-07', 'Phú Lạc - Đại Từ - Thái Nguyên', '0192055211999', '0334568745', 'Hà Đông - Hà Nội', 'nguyenquanghuy@gmail.com', 'Độc thân', 'Kinh', 'SV001', '2022-05-21', 'Hà Đông', '0563456445', '01141256623', 'none_image_profile'),
+('NV005', 'NV', 'MPB03', 20000000, 'Nữ', 'HD005', 'Nguyễn Minh Ngọc', '2000-06-23', 'Văn Quán - Hà Đông', '019200555685', '0333444555', 'Văn Quán - Hà Đông', 'ngocnm@gmail.com', 'Độc thân', 'Kinh', 'TS001', '2021-05-14', 'Hà Đông', '2255669854', '124587963', 'none_image_profile'),
+('NV006', 'NV', 'MPB02', 20000000, 'Nam', 'HD006', 'Nguyễn Minh Nam', '2004-08-12', 'Phú Lạc - Đại Từ - Thái Nguyên', '019274711999', '0385668923', 'Yên Xá - Tân Triều - Thanh Trì - Hà Nội', 'nguyenminhnam@gmail.com', 'Đã kết hôn', 'Kinh', 'SV001', '2021-04-21', 'Đại Từ', '0185456546', '01145636622', 'none_image_profile'),
+('NV007', 'TP', 'MPB02', 50000000, 'Nam', 'HD007', 'Hoàng Anh Khoa', '2004-05-14', 'Hoàng Hóa - Thanh Hóa', '019204258963', '0125478963', 'Hà Đông - Hà Nội', 'khoangha@gmail.com', 'Đã kết hôn', 'Kinh', 'TNKHMTTT', '2021-04-21', 'Thanh Hóa', '32145698752', '2541652554', 'none_image_profile');
 
 --
--- Triggers `qlnv_nhanvien`
+-- Bẫy `qlnv_nhanvien`
 --
 DELIMITER $$
 CREATE TRIGGER `befor_update_nhanvien` BEFORE UPDATE ON `qlnv_nhanvien` FOR EACH ROW BEGIN
@@ -572,42 +524,39 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `qlnv_phanquyenuser`
+-- Cấu trúc bảng cho bảng `qlnv_phanquyenuser`
 --
 
 CREATE TABLE `qlnv_phanquyenuser` (
   `id_user` int(11) NOT NULL,
   `role_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Dumping data for table `qlnv_phanquyenuser`
+-- Đang đổ dữ liệu cho bảng `qlnv_phanquyenuser`
 --
 
 INSERT INTO `qlnv_phanquyenuser` (`id_user`, `role_id`) VALUES
-(1, 1),
-(2, 3),
-(7, 3),
-(8, 1),
-(10, 2),
-(11, 3);
+(13, 1),
+(14, 3),
+(17, 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `qlnv_phongban`
+-- Cấu trúc bảng cho bảng `qlnv_phongban`
 --
 
 CREATE TABLE `qlnv_phongban` (
-  `MaPB` varchar(8) COLLATE utf8_unicode_ci NOT NULL,
-  `TenPB` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `diachi` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `sodt` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `MaTruongPhong` varchar(8) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `MaPB` varchar(8) NOT NULL,
+  `TenPB` varchar(50) NOT NULL,
+  `diachi` varchar(50) DEFAULT NULL,
+  `sodt` varchar(10) DEFAULT NULL,
+  `MaTruongPhong` varchar(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 --
--- Dumping data for table `qlnv_phongban`
+-- Đang đổ dữ liệu cho bảng `qlnv_phongban`
 --
 
 INSERT INTO `qlnv_phongban` (`MaPB`, `TenPB`, `diachi`, `sodt`, `MaTruongPhong`) VALUES
@@ -621,17 +570,17 @@ INSERT INTO `qlnv_phongban` (`MaPB`, `TenPB`, `diachi`, `sodt`, `MaTruongPhong`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `qlnv_role`
+-- Cấu trúc bảng cho bảng `qlnv_role`
 --
 
 CREATE TABLE `qlnv_role` (
   `role_id` int(11) NOT NULL,
   `role_name` varchar(20) NOT NULL,
   `role_folder` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Dumping data for table `qlnv_role`
+-- Đang đổ dữ liệu cho bảng `qlnv_role`
 --
 
 INSERT INTO `qlnv_role` (`role_id`, `role_name`, `role_folder`) VALUES
@@ -642,7 +591,7 @@ INSERT INTO `qlnv_role` (`role_id`, `role_name`, `role_folder`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `qlnv_thoigiancongtac`
+-- Cấu trúc bảng cho bảng `qlnv_thoigiancongtac`
 --
 
 CREATE TABLE `qlnv_thoigiancongtac` (
@@ -652,33 +601,26 @@ CREATE TABLE `qlnv_thoigiancongtac` (
   `NgayNhanChuc` date NOT NULL DEFAULT current_timestamp(),
   `NgayKetThuc` date DEFAULT NULL,
   `DuongNhiem` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Dumping data for table `qlnv_thoigiancongtac`
+-- Đang đổ dữ liệu cho bảng `qlnv_thoigiancongtac`
 --
 
 INSERT INTO `qlnv_thoigiancongtac` (`id`, `MaNV`, `MaCV`, `NgayNhanChuc`, `NgayKetThuc`, `DuongNhiem`) VALUES
-(1, 'MNN01', 'NV', '2022-12-13', NULL, 1),
-(2, 'MNN01', 'TTS', '2022-11-01', '2022-12-13', 0),
-(3, 'MNV01', 'TTS', '2022-10-01', NULL, 1),
-(4, 'MNV02', 'TTS', '2022-11-02', NULL, 1),
-(5, 'MNV03', 'TTS', '2022-11-02', NULL, 1),
-(6, 'MNV04', 'GD', '2022-12-01', NULL, 1),
-(7, 'MNV05', 'TTS', '2022-12-01', NULL, 1),
-(8, 'MNV06', 'NV', '2022-10-04', NULL, 1),
-(9, 'MNV07', 'NV', '2022-10-04', NULL, 1),
-(10, 'MNV08', 'NV', '2022-10-10', NULL, 1),
-(11, 'MNV10', 'NV', '2022-12-13', NULL, 1),
-(12, 'MNV12', 'TTS', '2022-12-13', '2022-12-18', 0),
-(13, 'MNV24', 'NV', '2022-12-18', NULL, 1),
-(14, 'MNV36', 'NV', '2022-12-18', NULL, 1),
-(15, 'MNV12', 'NV', '2022-12-18', NULL, 1);
+(20, 'NV001', 'NV', '2025-03-29', NULL, 1),
+(21, 'NV002', 'GD', '2025-03-29', NULL, 1),
+(22, 'NV003', 'NV', '2025-03-29', NULL, 1),
+(23, 'NV000', 'GD', '2025-03-29', NULL, 1),
+(24, 'NV004', 'TTS', '2025-03-29', NULL, 1),
+(25, 'NV005', 'NV', '2025-04-03', NULL, 1),
+(26, 'NV006', 'NV', '2025-04-05', NULL, 1),
+(27, 'NV007', 'TP', '2025-04-10', NULL, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `qlnv_thuongphat`
+-- Cấu trúc bảng cho bảng `qlnv_thuongphat`
 --
 
 CREATE TABLE `qlnv_thuongphat` (
@@ -689,19 +631,10 @@ CREATE TABLE `qlnv_thuongphat` (
   `Tien` double NOT NULL,
   `Ngay` date NOT NULL,
   `GhiChu` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Dumping data for table `qlnv_thuongphat`
---
-
-INSERT INTO `qlnv_thuongphat` (`id`, `MaNV`, `Loai`, `LyDo`, `Tien`, `Ngay`, `GhiChu`) VALUES
-(3, 'MNV02', 0, 'Chăm chỉ làm việc tốt', 10000, '2022-12-18', 'Tốt'),
-(5, 'MNV03', 1, 'Yeu MY Linh', 10000, '2022-12-01', ':))'),
-(6, 'MNV03', 0, ':))', 20000, '2022-12-02', ':))');
-
---
--- Triggers `qlnv_thuongphat`
+-- Bẫy `qlnv_thuongphat`
 --
 DELIMITER $$
 CREATE TRIGGER `delete_thuongphat_luong` AFTER DELETE ON `qlnv_thuongphat` FOR EACH ROW BEGIN
@@ -858,17 +791,17 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `qlnv_trinhdohocvan`
+-- Cấu trúc bảng cho bảng `qlnv_trinhdohocvan`
 --
 
 CREATE TABLE `qlnv_trinhdohocvan` (
   `MATDHV` varchar(8) NOT NULL,
   `TenTDHV` varchar(50) NOT NULL,
   `ChuyenNganh` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Dumping data for table `qlnv_trinhdohocvan`
+-- Đang đổ dữ liệu cho bảng `qlnv_trinhdohocvan`
 --
 
 INSERT INTO `qlnv_trinhdohocvan` (`MATDHV`, `TenTDHV`, `ChuyenNganh`) VALUES
@@ -881,7 +814,7 @@ INSERT INTO `qlnv_trinhdohocvan` (`MATDHV`, `TenTDHV`, `ChuyenNganh`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `qlnv_user`
+-- Cấu trúc bảng cho bảng `qlnv_user`
 --
 
 CREATE TABLE `qlnv_user` (
@@ -892,183 +825,180 @@ CREATE TABLE `qlnv_user` (
   `MaNhanVien` varchar(8) NOT NULL,
   `LastLogin` datetime DEFAULT NULL,
   `register` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 
 --
--- Dumping data for table `qlnv_user`
+-- Đang đổ dữ liệu cho bảng `qlnv_user`
 --
 
 INSERT INTO `qlnv_user` (`Id_user`, `username`, `password`, `tennguoidung`, `MaNhanVien`, `LastLogin`, `register`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrator', 'MNV02', '2022-12-25 21:13:00', '2022-12-01 14:57:45'),
-(2, 'namsiunhon', '827ccb0eea8a706c4c34a16891f84e7b', 'Lã Đức Nam', 'MNV02', '2022-12-25 21:12:41', '2022-12-01 14:57:59'),
-(7, 'nghiaphamhong', '827ccb0eea8a706c4c34a16891f84e7b', 'Pham Hong Nghia', 'MNV03', '2022-12-25 21:12:11', '2022-12-20 20:20:24'),
-(8, 'phamnhatvuong', '827ccb0eea8a706c4c34a16891f84e7b', 'Phạm Nhật Vượng', 'MNV04', '2022-12-21 21:18:20', '2022-12-21 14:43:39'),
-(10, 'letailinh', '827ccb0eea8a706c4c34a16891f84e7b', 'Lê Tài Linh', 'MNV10', '2022-12-22 07:58:14', '2022-12-21 22:27:34'),
-(11, 'duongnam', '827ccb0eea8a706c4c34a16891f84e7b', 'Dương Văn Nam', 'MNV01', '2022-12-25 20:49:02', '2022-12-25 20:48:52');
+(13, 'admin', '202cb962ac59075b964b07152d234b70', 'Trần Chủ Tịch', 'NV000', '2025-04-12 00:36:31', '2025-03-29 10:06:11'),
+(14, 'huynq', '202cb962ac59075b964b07152d234b70', 'Nguyễn Quang Huy', 'NV004', '2025-04-12 00:35:46', '2025-03-29 16:32:20'),
+(17, 'khoaha', 'c4ca4238a0b923820dcc509a6f75849b', 'Hoàng Anh Khoa', 'NV007', '2025-04-12 00:34:12', '2025-04-10 14:16:11');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `qlnv_chamcong`
+-- Chỉ mục cho bảng `qlnv_chamcong`
 --
 ALTER TABLE `qlnv_chamcong`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `qlnv_chamcongngay`
+-- Chỉ mục cho bảng `qlnv_chamcongngay`
 --
 ALTER TABLE `qlnv_chamcongngay`
   ADD PRIMARY KEY (`MaChamCong`);
 
 --
--- Indexes for table `qlnv_chamcongthang`
+-- Chỉ mục cho bảng `qlnv_chamcongthang`
 --
 ALTER TABLE `qlnv_chamcongthang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `qlnv_chamcongtongketthang`
+-- Chỉ mục cho bảng `qlnv_chamcongtongketthang`
 --
 ALTER TABLE `qlnv_chamcongtongketthang`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Indexes for table `qlnv_chucvu`
+-- Chỉ mục cho bảng `qlnv_chucvu`
 --
 ALTER TABLE `qlnv_chucvu`
   ADD PRIMARY KEY (`MaCV`);
 
 --
--- Indexes for table `qlnv_congty`
+-- Chỉ mục cho bảng `qlnv_congty`
 --
 ALTER TABLE `qlnv_congty`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `qlnv_hopdong`
+-- Chỉ mục cho bảng `qlnv_hopdong`
 --
 ALTER TABLE `qlnv_hopdong`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `qlnv_imagedata`
+-- Chỉ mục cho bảng `qlnv_imagedata`
 --
 ALTER TABLE `qlnv_imagedata`
   ADD PRIMARY KEY (`ID_image`);
 
 --
--- Indexes for table `qlnv_luong`
+-- Chỉ mục cho bảng `qlnv_luong`
 --
 ALTER TABLE `qlnv_luong`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `qlnv_nhanvien`
+-- Chỉ mục cho bảng `qlnv_nhanvien`
 --
 ALTER TABLE `qlnv_nhanvien`
   ADD PRIMARY KEY (`MaNhanVien`);
 
 --
--- Indexes for table `qlnv_phanquyenuser`
+-- Chỉ mục cho bảng `qlnv_phanquyenuser`
 --
 ALTER TABLE `qlnv_phanquyenuser`
   ADD PRIMARY KEY (`id_user`,`role_id`);
 
 --
--- Indexes for table `qlnv_phongban`
+-- Chỉ mục cho bảng `qlnv_phongban`
 --
 ALTER TABLE `qlnv_phongban`
   ADD PRIMARY KEY (`MaPB`);
 
 --
--- Indexes for table `qlnv_thoigiancongtac`
+-- Chỉ mục cho bảng `qlnv_thoigiancongtac`
 --
 ALTER TABLE `qlnv_thoigiancongtac`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `qlnv_thuongphat`
+-- Chỉ mục cho bảng `qlnv_thuongphat`
 --
 ALTER TABLE `qlnv_thuongphat`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `qlnv_trinhdohocvan`
+-- Chỉ mục cho bảng `qlnv_trinhdohocvan`
 --
 ALTER TABLE `qlnv_trinhdohocvan`
   ADD PRIMARY KEY (`MATDHV`);
 
 --
--- Indexes for table `qlnv_user`
+-- Chỉ mục cho bảng `qlnv_user`
 --
 ALTER TABLE `qlnv_user`
   ADD PRIMARY KEY (`Id_user`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `qlnv_chamcong`
+-- AUTO_INCREMENT cho bảng `qlnv_chamcong`
 --
 ALTER TABLE `qlnv_chamcong`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
--- AUTO_INCREMENT for table `qlnv_chamcongngay`
+-- AUTO_INCREMENT cho bảng `qlnv_chamcongngay`
 --
 ALTER TABLE `qlnv_chamcongngay`
-  MODIFY `MaChamCong` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `MaChamCong` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
--- AUTO_INCREMENT for table `qlnv_chamcongthang`
+-- AUTO_INCREMENT cho bảng `qlnv_chamcongthang`
 --
 ALTER TABLE `qlnv_chamcongthang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
--- AUTO_INCREMENT for table `qlnv_chamcongtongketthang`
+-- AUTO_INCREMENT cho bảng `qlnv_chamcongtongketthang`
 --
 ALTER TABLE `qlnv_chamcongtongketthang`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
--- AUTO_INCREMENT for table `qlnv_congty`
+-- AUTO_INCREMENT cho bảng `qlnv_congty`
 --
 ALTER TABLE `qlnv_congty`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `qlnv_hopdong`
+-- AUTO_INCREMENT cho bảng `qlnv_hopdong`
 --
 ALTER TABLE `qlnv_hopdong`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- AUTO_INCREMENT for table `qlnv_luong`
+-- AUTO_INCREMENT cho bảng `qlnv_luong`
 --
 ALTER TABLE `qlnv_luong`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `qlnv_thoigiancongtac`
+-- AUTO_INCREMENT cho bảng `qlnv_thoigiancongtac`
 --
 ALTER TABLE `qlnv_thoigiancongtac`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
--- AUTO_INCREMENT for table `qlnv_thuongphat`
+-- AUTO_INCREMENT cho bảng `qlnv_thuongphat`
 --
 ALTER TABLE `qlnv_thuongphat`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `qlnv_user`
+-- AUTO_INCREMENT cho bảng `qlnv_user`
 --
 ALTER TABLE `qlnv_user`
-  MODIFY `Id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `Id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

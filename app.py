@@ -2579,7 +2579,7 @@ def form_add_data_cham_cong():
 #
 # ------------------ CHAM CONG ------------------------
 #
-
+# Deivy
 #
 # ------------------ PHONG BAN ------------------------
 #
@@ -2630,6 +2630,7 @@ def view_phong_ban(maPB):
                 WHERE MaPB = %s
                 ORDER BY MaPB ASC""", (maPB, ))
     raw_data = cur.fetchall()
+    # print("raw_data[0]:", raw_data[0])
     
     if (len(raw_data) == 0):
         abort(404)
@@ -2655,13 +2656,14 @@ def view_phong_ban(maPB):
     for elm in raw_data[0]:
         phongban.append(elm)
     phongban.append(count_data[0])
-    
     cur.execute("""
                 SELECT nv.TenNV, nv.DienThoai
                 FROM qlnv_nhanvien nv
                 WHERE nv.MaNhanVien = %s
-                """, (phongban[4], ))
-    truongphong = cur.fetchall()[0]
+                """, (phongban[4], )) #fix
+    # truongphong = cur.fetchall()[0]
+    result = cur.fetchone()
+    truongphong=result if result else ("Chưa có", "Chưa có")
     
     cur.execute("""
                 SELECT COUNT(*)
@@ -2718,20 +2720,20 @@ def form_update_phong_ban(maPB):
         MaTP = detail['MaTP']
         DIACHI = detail['DIACHI']
         
-        if MaTP != phongban[4]:
+        if MaTP != phongban[4]: #kiểm tra trưởng phòng mới
             cur.execute("""
                         SELECT * 
                         FROM qlnv_nhanvien
                         WHERE MaNhanVien = %s 
                         """, (MaTP, ))
 
-            if (len(cur.fetchall()) != 1):
+            if (len(cur.fetchall()) != 1): #kiểm tra xem mnv có tồn tại khkh
                 return render_template(session['role'] +'phongban/form_add_data_phong_ban.html',
-                                    err = "Không tồn lại mã nhân viên " + MaTP,
+                                    err = "Nhân viên không tồn tại " + MaTP,
                                     phongban = phongban,
                             congty = session['congty'],
                             my_user = session['username'])
-        
+            #kiểm tra xem đã là tp của phòng khác chưa
             cur.execute("""
                         SELECT * 
                         FROM qlnv_phongban
@@ -2751,7 +2753,7 @@ def form_update_phong_ban(maPB):
                     WHERE MaPB = %s;
                     """, ( TenPB, DIACHI, SDT, MaTP,MaPB))
         mysql.connection.commit()
-        return redirect(url_for('view_all_phong_ban'))
+        return redirect(url_for('view_all_phong_ban'))#chuyển hướng về trang đầu
     
     return render_template(session['role'] +'phongban/form_update_phong_ban.html',
                            phongban = phongban,
@@ -2780,7 +2782,7 @@ def delete_phong_ban(maPB):
                 """, (maPB, ))
     mysql.connection.commit()
     return redirect(url_for('view_all_phong_ban'))
-    
+ 
 @login_required
 @app.route('/form_add_data_phong_ban', methods=['GET','POST'])
 def form_add_data_phong_ban():
@@ -2801,7 +2803,7 @@ def form_add_data_phong_ban():
                     FROM qlnv_nhanvien
                     WHERE MaNhanVien = %s 
                     """, (MaTP, ))
-
+        #check mã TP
         if (len(cur.fetchall()) != 1):
             return render_template(session['role'] +'phongban/form_add_data_phong_ban.html',
                                    err = "Không tồn lại mã nhân viên " + MaTP,
@@ -2813,7 +2815,7 @@ def form_add_data_phong_ban():
                     FROM qlnv_phongban
                     WHERE MaTruongPhong = %s 
                     """, (MaTP, ))
-        
+        #check nv đã là TP chưa
         if (len(cur.fetchall()) != 0):
             return render_template(session['role'] +'phongban/form_add_data_phong_ban.html',
                                    err = "Nhân viên " + MaTP + " đã làm trưởng phòng phòng khác",
@@ -2825,7 +2827,7 @@ def form_add_data_phong_ban():
                     FROM qlnv_phongban
                     WHERE MaPB = %s 
                     """, (MaPB, ))
-        
+        #check mã PB bị trùng
         if (len(cur.fetchall()) != 0):
             return render_template(session['role'] +'phongban/form_add_data_phong_ban.html',
                                    err = "Mã " + MaPB + " đã tồn tại",
@@ -2840,7 +2842,7 @@ def form_add_data_phong_ban():
     return render_template(session['role'] +'phongban/form_add_data_phong_ban.html',
                            congty = session['congty'],
                            my_user = session['username'])
-
+#14/04/2025
 @login_required
 @app.route('/form_add_thuong_phat_phong_ban/<string:maPB>', methods=['GET','POST'])
 def form_add_thuong_phat_phong_ban(maPB):

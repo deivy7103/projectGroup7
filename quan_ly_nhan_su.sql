@@ -43,24 +43,24 @@ CREATE TABLE `qlnv_chamcong` (
 --
 
 INSERT INTO `qlnv_chamcong` (`id`, `MaNV`, `Ngay`, `GioVao`, `GioRa`, `OT`, `ThoiGianLamViec`, `ThoiGian_thap_phan`) VALUES
-(54, 'MNV03', '2022-12-17', '07:30:00', '11:50:00', 0, '04:20:00', 4.3),
-(55, 'MNV03', '2022-12-11', '07:30:00', '11:30:00', 0, '04:00:00', 4),
-(60, 'MNV01', '2022-11-02', '07:30:00', '11:30:00', 0, '04:00:00', 4),
-(62, 'MNV03', '2022-11-01', '07:30:00', '10:30:00', 0, '03:00:00', 3),
-(63, 'MNV02', '2022-12-01', '07:30:00', '11:30:00', 0, '04:00:00', 4),
-(64, 'MNV01', '2022-11-01', '07:30:00', '11:30:00', 0, '04:00:00', 4),
-(65, 'MNV03', '2022-12-03', '07:30:00', '11:50:00', 0, '04:20:00', 4.3),
-(66, 'MNV03', '2022-12-04', '07:30:00', '11:30:00', 0, '04:00:00', 4),
-(67, 'MNV03', '2022-12-04', '13:30:00', '17:00:00', 0, '03:30:00', 3.5),
-(68, 'MNV02', '2022-12-02', '07:30:00', '11:50:00', 0, '04:20:00', 4.3),
-(69, 'MNV02', '2022-12-03', '07:30:00', '11:50:00', 0, '04:20:00', 4.3),
-(70, 'MNV03', '2022-10-01', '07:30:00', '11:00:00', 0, '03:30:00', 3.5),
-(71, 'MNV03', '2022-10-02', '07:30:00', '11:30:00', 0, '04:00:00', 4),
-(72, 'MNV03', '2022-12-03', '07:30:00', '10:15:00', 0, '02:45:00', 2.8),
-(73, 'MNV02', '2022-11-01', '07:30:00', '11:50:00', 0, '04:20:00', 4.3),
-(74, 'MNV02', '2022-11-18', '07:30:00', '11:50:00', 0, '04:20:00', 4.3),
-(75, 'MNV02', '2022-12-25', '16:14:29', '16:21:13', 0, '00:06:44', 0.1),
-(76, 'MNV01', '2022-12-25', '20:49:26', '20:52:22', 0, '00:02:56', 0);
+(54, 'MNV03', '2024-12-17', '07:30:00', '11:50:00', 0, '04:20:00', 4.3),
+(55, 'MNV03', '2024-12-11', '07:30:00', '11:30:00', 0, '04:00:00', 4),
+(60, 'MNV01', '2024-11-02', '07:30:00', '11:30:00', 0, '04:00:00', 4),
+(62, 'MNV03', '2024-11-01', '07:30:00', '10:30:00', 0, '03:00:00', 3),
+(63, 'MNV02', '2024-12-01', '07:30:00', '11:30:00', 0, '04:00:00', 4),
+(64, 'MNV01', '2024-11-01', '07:30:00', '11:30:00', 0, '04:00:00', 4),
+(65, 'MNV03', '2024-12-03', '07:30:00', '11:50:00', 0, '04:20:00', 4.3),
+(66, 'MNV03', '2024-12-04', '07:30:00', '11:30:00', 0, '04:00:00', 4),
+(67, 'MNV03', '2024-12-04', '13:30:00', '17:00:00', 0, '03:30:00', 3.5),
+(68, 'MNV02', '2024-12-02', '07:30:00', '11:50:00', 0, '04:20:00', 4.3),
+(69, 'MNV02', '2024-12-03', '07:30:00', '11:50:00', 0, '04:20:00', 4.3),
+(70, 'MNV03', '2024-10-01', '07:30:00', '11:00:00', 0, '03:30:00', 3.5),
+(71, 'MNV03', '2024-10-02', '07:30:00', '11:30:00', 0, '04:00:00', 4),
+(72, 'MNV03', '2024-12-03', '07:30:00', '10:15:00', 0, '02:45:00', 2.8),
+(73, 'MNV02', '2024-11-01', '07:30:00', '11:50:00', 0, '04:20:00', 4.3),
+(74, 'MNV02', '2024-11-18', '07:30:00', '11:50:00', 0, '04:20:00', 4.3),
+(75, 'MNV02', '2024-12-25', '16:14:29', '16:21:13', 0, '00:06:44', 0.1),
+(76, 'MNV01', '2024-12-25', '20:49:26', '20:52:22', 0, '00:02:56', 0);
 
 --
 -- Triggers `qlnv_chamcong`
@@ -144,13 +144,13 @@ CREATE TABLE `qlnv_chamcongngay` (
 --
 
 INSERT INTO `qlnv_chamcongngay` (`MaChamCong`, `MaNV`, `Nam`, `Thang`, `SoNgayThang`, `Ngay1`, `Ngay2`, `Ngay3`, `Ngay4`, `Ngay5`, `Ngay6`, `Ngay7`, `Ngay8`, `Ngay9`, `Ngay10`, `Ngay11`, `Ngay12`, `Ngay13`, `Ngay14`, `Ngay15`, `Ngay16`, `Ngay17`, `Ngay18`, `Ngay19`, `Ngay20`, `Ngay21`, `Ngay22`, `Ngay23`, `Ngay24`, `Ngay25`, `Ngay26`, `Ngay27`, `Ngay28`, `Ngay29`, `Ngay30`, `Ngay31`) VALUES
-(41, 'MNV03', 2022, 12, 31, -1, -1, 7.1, 7.5, -1, -1, -1, -1, -1, -1, 4, -1, -1, -1, -1, -1, 4.3, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1),
-(45, 'MNV01', 2022, 11, 30, 4, 4, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1),
-(47, 'MNV03', 2022, 11, 30, 3, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1),
-(48, 'MNV02', 2022, 12, 31, 4, 4.3, 4.3, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0.1, -1, -1, -1, -1, -1, -1),
-(49, 'MNV03', 2022, 10, 31, 3.5, 4, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1),
-(50, 'MNV02', 2022, 11, 30, 4.3, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 4.3, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1),
-(51, 'MNV01', 2022, 12, 31, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1);
+(41, 'MNV03', 2024, 12, 31, -1, -1, 7.1, 7.5, -1, -1, -1, -1, -1, -1, 4, -1, -1, -1, -1, -1, 4.3, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1),
+(45, 'MNV01', 2024, 11, 30, 4, 4, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1),
+(47, 'MNV03', 2024, 11, 30, 3, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1),
+(48, 'MNV02', 2024, 12, 31, 4, 4.3, 4.3, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0.1, -1, -1, -1, -1, -1, -1),
+(49, 'MNV03', 2024, 10, 31, 3.5, 4, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1),
+(50, 'MNV02', 2024, 11, 30, 4.3, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 4.3, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1),
+(51, 'MNV01', 2024, 12, 31, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 0, -1, -1, -1, -1, -1, -1);
 
 -- --------------------------------------------------------
 
@@ -181,9 +181,9 @@ CREATE TABLE `qlnv_chamcongthang` (
 --
 
 INSERT INTO `qlnv_chamcongthang` (`id`, `MaNV`, `Nam`, `T1`, `T2`, `T3`, `T4`, `T5`, `T6`, `T7`, `T8`, `T9`, `T10`, `T11`, `T12`) VALUES
-(21, 'MNV03', 2022, -1, -1, -1, -1, -1, -1, -1, -1, -1, 7.5, 3, 22.9),
-(25, 'MNV01', 2022, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 8, 0),
-(27, 'MNV02', 2022, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 8.6, 12.7);
+(21, 'MNV03', 2024, -1, -1, -1, -1, -1, -1, -1, -1, -1, 7.5, 3, 22.9),
+(25, 'MNV01', 2024, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 8, 0),
+(27, 'MNV02', 2024, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 8.6, 12.7);
 
 -- --------------------------------------------------------
 
@@ -207,13 +207,13 @@ CREATE TABLE `qlnv_chamcongtongketthang` (
 --
 
 INSERT INTO `qlnv_chamcongtongketthang` (`Id`, `MaNhanVien`, `Nam`, `Thang`, `SoNgayDiLam`, `SoNgayDiVang`, `SoNgayTangCa`, `TongSoNgay`) VALUES
-(19, 'MNV03', 2022, 12, 4, 23, 0, 4),
-(23, 'MNV01', 2022, 11, 2, 24, 0, 2),
-(24, 'MNV03', 2022, 11, 1, 25, 0, 1),
-(25, 'MNV02', 2022, 12, 4, 23, 0, 4),
-(26, 'MNV03', 2022, 10, 2, 24, 0, 2),
-(27, 'MNV02', 2022, 11, 2, 24, 0, 2),
-(28, 'MNV01', 2022, 12, 1, 26, 0, 1);
+(19, 'MNV03', 2024, 12, 4, 23, 0, 4),
+(23, 'MNV01', 2024, 11, 2, 24, 0, 2),
+(24, 'MNV03', 2024, 11, 1, 25, 0, 1),
+(25, 'MNV02', 2024, 12, 4, 23, 0, 4),
+(26, 'MNV03', 2024, 10, 2, 24, 0, 2),
+(27, 'MNV02', 2024, 11, 2, 24, 0, 2),
+(28, 'MNV01', 2024, 12, 1, 26, 0, 1);
 
 --
 -- Triggers `qlnv_chamcongtongketthang`
@@ -394,6 +394,7 @@ CREATE TABLE `qlnv_chucvu` (
 
 INSERT INTO `qlnv_chucvu` (`MaCV`, `TenCV`) VALUES
 ('GD', 'Giám đốc'),
+('TP', 'Trưởng phòng'),
 ('NV', 'Nhân viên'),
 ('TTS', 'Thực tập sinh');
 
@@ -418,7 +419,7 @@ CREATE TABLE `qlnv_congty` (
 --
 
 INSERT INTO `qlnv_congty` (`ID`, `TenCongTy`, `DiaChi`, `LogoPath`, `SoDienThoai`, `MaSoDoanhNghiep`, `NgayThanhLap`) VALUES
-(1, 'Công ty tư vấn giải pháp phần mềm quản lý nhân sự', '334 Đ. Nguyễn Trãi, Thanh Xuân Trung, Thanh Xuân, Hà Nội', 'web/img/favicon.png', '0986259999', '0869886889', '2022-12-18');
+(1, 'Công ty quản lý nhân sự PTIT', 'Nguyễn Trãi, Hà Đông, Hà Nội', 'web/img/favicon.png', '0123456789', '0987654321', '2025-03-15');
 
 -- --------------------------------------------------------
 
@@ -440,17 +441,17 @@ CREATE TABLE `qlnv_hopdong` (
 --
 
 INSERT INTO `qlnv_hopdong` (`id`, `MaHopDong`, `LoaiHopDong`, `NgayBatDau`, `NgayKetThuc`, `GhiChu`) VALUES
-(1, 'MHDMN11', 'Nhân viên', '2022-12-13', NULL, 'Hợp đồng cho nhân viên Nguyễn Quang Minh - MNN01'),
-(2, 'MHD01', 'Thực tập sinh', '2022-10-01', NULL, 'Hợp đồng cho thực tập sinh Dương Văn Nam - MNV01'),
-(3, 'MHD02', 'Thực tập sinh', '2022-11-02', NULL, 'Hợp đồng cho thực tập sinh Lã Đức Nam - MNV02'),
-(4, 'MHD03', 'Thực tập sinh', '2022-11-02', NULL, 'Hợp đồng cho thực tập sinh Phạm Hồng Nghĩa - MNV03'),
-(5, 'MHD04', 'Giám đốc', '2022-12-01', NULL, 'Hợp đồng thuê giám đốc'),
-(6, 'MHD05', 'Thực tập sinh', '2022-12-01', NULL, 'Hợp đồng thực tập sinh cho Nguyễn Khắc Huy'),
-(7, 'MHD06', 'Nhân viên', '2022-10-04', NULL, 'Hợp đồng nhân viên cho Phạm Như Khoa'),
-(8, 'MHD07', 'Nhân viên', '2022-10-04', NULL, 'Hợp đồng nhân viên cho Vũ Mai Anh'),
-(9, 'MHD08', 'Nhân viên', '2022-10-10', NULL, 'Hợp đồng nhân viên cho Nguyễn Thị Cẩm Tiên'),
-(10, 'HDMNV10', 'Nhân viên', '2022-12-13', NULL, 'Hợp đồng nhân viên cho Lê Tài Linh'),
-(11, 'HDMNV12', 'Thực tập sinh', '2022-12-13', NULL, 'Hợp đồng thực tập sinh cho Trần Hoàng Anh');
+(1, 'MHDMN11', 'Nhân viên', '2024-12-13', NULL, 'Hợp đồng cho nhân viên Nguyễn Quang Huy - MNN00'),
+(2, 'MHD01', 'Thực tập sinh', '2024-10-01', NULL, 'Hợp đồng cho thực tập sinh Hoàng Huy Phong - MNV01'),
+(3, 'MHD02', 'Thực tập sinh', '2024-11-02', NULL, 'Hợp đồng cho thực tập sinh Nguyễn Minh Nam - MNV02'),
+(4, 'MHD03', 'Thực tập sinh', '2024-11-02', NULL, 'Hợp đồng cho thực tập sinh Phạm Văn Doanh - MNV03'),
+(5, 'MHD04', 'Giám đốc', '2024-12-01', NULL, 'Hợp đồng thuê giám đốc'),
+(6, 'MHD05', 'Trưởng phòng', '2024-12-01', NULL, 'Hợp đồng trưởng phòng cho Hoàng Anh Khoa'),
+(7, 'MHD06', 'Nhân viên', '2024-10-04', NULL, 'Hợp đồng nhân viên cho Đặng Minh Khôi'),
+(8, 'MHD07', 'Nhân viên', '2024-10-04', NULL, 'Hợp đồng nhân viên cho Trần Minh Khôi'),
+(9, 'MHD08', 'Nhân viên', '2024-10-10', NULL, 'Hợp đồng nhân viên cho Nguyễn Minh Khôi'),
+(10, 'HDMNV10', 'Nhân viên', '2024-12-13', NULL, 'Hợp đồng nhân viên cho Lê Minh Khôi'),
+(11, 'HDMNV12', 'Thực tập sinh', '2024-12-13', NULL, 'Hợp đồng thực tập sinh cho Trần Anh Khoa');
 
 -- --------------------------------------------------------
 
@@ -498,13 +499,13 @@ CREATE TABLE `qlnv_luong` (
 --
 
 INSERT INTO `qlnv_luong` (`id`, `MaNV`, `Nam`, `Thang`, `LuongCoDinh`, `LuongChamCong`, `SoTienThuong`, `SoTienPhat`, `TongSoTien`) VALUES
-(6, 'MNV03', 2022, 12, 1000000, 125000, 20000, 10000, 135000),
-(7, 'MNV01', 2022, 11, 1000000, 45000, 0, 0, 45000),
-(8, 'MNV03', 2022, 11, 1000000, 17000, 0, 0, 17000),
-(9, 'MNV02', 2022, 12, 1000000, 71000, 10000, 0, 81000),
-(10, 'MNV03', 2022, 10, 1000000, 45000, 0, 0, 45000),
-(11, 'MNV02', 2022, 11, 1000000, 51000, 0, 0, 51000),
-(12, 'MNV01', 2022, 12, 1000000, 0, 0, 0, 0);
+(6, 'MNV03', 2024, 12, 1000000, 125000, 20000, 10000, 135000),
+(7, 'MNV01', 2024, 11, 1000000, 45000, 0, 0, 45000),
+(8, 'MNV03', 2024, 11, 1000000, 17000, 0, 0, 17000),
+(9, 'MNV02', 2024, 12, 1000000, 71000, 10000, 0, 81000),
+(10, 'MNV03', 2024, 10, 1000000, 45000, 0, 0, 45000),
+(11, 'MNV02', 2024, 11, 1000000, 51000, 0, 0, 51000),
+(12, 'MNV01', 2024, 12, 1000000, 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -541,19 +542,19 @@ CREATE TABLE `qlnv_nhanvien` (
 --
 
 INSERT INTO `qlnv_nhanvien` (`MaNhanVien`, `MaChucVu`, `MaPhongBan`, `Luong`, `GioiTinh`, `MaHD`, `TenNV`, `NgaySinh`, `NoiSinh`, `SoCMT`, `DienThoai`, `DiaChi`, `Email`, `TTHonNhan`, `DanToc`, `MATDHV`, `NgayCMND`, `NoiCMND`, `BHYT`, `BHXH`, `ID_profile_image`) VALUES
-('MNN01', 'NV', 'MPB05', 1300000, 'Nam', 'MHDMN11', 'Nguyễn Quang Minh', '2002-12-12', 'Thanh Vân - Hiệp Hòa - Bắc Giang', '001205068139', '0965513786', 'Làng sinh viên Hacinco - Nhân Chính - Thanh Xuân - Hà Nội', 'nguyenquangminh@gmail.com', 'Độc thân', 'Kinh', 'SV002', '2019-03-10', 'Hiệp Hòa', 'SV40101206185', '0118059003', 'none_image_profile'),
-('MNV01', 'TTS', 'MPB01', 1000000, 'Nam', 'MHD01', 'Dương Văn Nam', '2002-01-07', 'Hiệp Hòa - Bắc Giang', '001215387168', '0877625245', 'Hiệp Hòa - Bắc Giang', 'namdv@gmail.com', 'Độc thân', 'Kinh', 'SV001', '2019-11-30', 'Hiệp Hòa - Bắc Giang', 'SV40101238294', '0118128311', 'Image_Profile_MNV01'),
-('MNV02', 'TTS', 'MPB02', 1000000, 'Nam', 'MHD02', 'Lã Đức Nam', '2002-11-28', 'Hà Tây', '001202035197', '0945549876', 'Làng sinh viên Hacinco - Nhân Chính - Thanh Xuân - Hà Nội - Việt Nam', 'namld@gmail.com', 'Độc thân', 'Kinh', 'SV001', '2020-08-03', 'Hà Nội', 'SV401985718', '0118157171', 'Image_Profile_MNV02'),
-('MNV03', 'TTS', 'MPB01', 1000000, 'Nam', 'MHD03', 'Phạm Hồng Nghĩa', '2002-04-04', 'Phú Thọ', '123456789', '0822655245', '36 Vũ Trọng Phụng, Thanh Xuân Trung, Thanh Xuân, Hà Nội', 'nghiaph@gmail.com', 'Đã kết hôn', 'Kinh', 'SV001', '2020-12-12', 'Phú Thọ', 'SV40101135729', '0811002892', 'Image_Profile_MNV03'),
-('MNV04', 'GD', 'PBGD', 10000000, 'Nam', 'MHD04', 'Phạm Nhật Vượng', '1968-08-05', 'Phù Lưu, Lộc Hà, Hà Tĩnh', '000827826195', '0877865245', 'Phù Lưu, Lộc Hà, Hà Tĩnh', 'vuongpn@gmail.com', 'Đã kết hôn', 'Kinh', 'TS001', '1986-10-10', 'Phù Lưu, Lộc Hà, Hà Tĩnh', '', '', 'Image_Profile_MNV04'),
-('MNV05', 'TTS', 'MPB02', 900000, 'Nam', 'MHD05', 'Nguyễn Khắc Huy', '2002-10-01', 'Đan Phượng - Hà Nội', '001297385197', '0877265456', 'Đan Phượng - Hà Nội', 'huynk@gmail.com', 'Độc thân', 'Kinh', 'SV001', '2020-03-03', 'Đan Phượng', '', '', 'none_image_profile'),
-('MNV06', 'NV', 'MPB03', 1500000, 'Nam', 'MHD06', 'Phạm Như Khoa', '2002-05-05', 'Hoài Đức - Hà Nội', '123456789', '0556276648', 'Hoài Đức - Hà Nội', 'khoapn@gmail.com', 'Độc thân', 'Kinh', 'SV001', '2020-08-09', 'Hoài Đức', '', '', 'none_image_profile'),
-('MNV07', 'NV', 'MPB03', 0.15, 'Nữ', 'MHD07', 'Vu Mai Anh', '2002-08-05', '', '123456789', '0655745341', 'Ha Noi', 'anhvm@gmail.com', 'Độc thân', 'Kinh', 'SV002', NULL, NULL, '', '', 'none_image_profile'),
-('MNV08', 'NV', 'MPB02', 700000, 'Nữ', 'MHD08', 'Nguyễn Thị Cẩm Tiên', '2002-09-09', '', '123456789', '0877567893', 'Hà Nội', 'tiennc@gmail.com', 'Độc thân', 'Kinh', 'SV002', '2019-05-03', 'Bắc Giang', '', '', 'none_image_profile'),
-('MNV10', 'NV', 'MPB01', 20000000, 'Nam', 'HDMNV10', 'Lê Tài Linh', '2002-12-12', 'Thôn Xuân Tân - Xuân Hưng - Thọ Xuân - Thanh Hoá  - Việt Nam', '001206064297', '0916578134', 'Làng sinh viên Hacinco - Nhân Chính - Thanh Xuân - Hà Nội - Việt Nam', 'linhle@gmail.com', 'Độc thân', 'Kinh', 'SV002', '2020-03-18', 'Thọ Xuân', 'SV40101208765', '0118000001', 'none_image_profile'),
-('MNV12', 'NV', 'MPB05', 1000000, 'Nam', 'HDMNV12', 'Trần Hoàng Anh', '2002-02-14', 'Đồng Họa - Xã Vạn Hòa - Huyện Nông Cống - Thanh Hóa', '001234957163', '0945875315', 'Làng sinh viên Hacinco - Nhân Chính - Thanh Xuân - Hà Nội - Việt Nam', 'tranhaicau@gmail.com', 'Độc thân', 'Kinh', 'SV001', '2019-04-05', 'Thanh Hóa', 'SV401975831', '0118648251', 'none_image_profile'),
-('MNV24', 'NV', 'MPB02', 950000, 'Nam', 'HDMNV24', 'Phan Quốc Minh', '2002-07-07', 'Khánh Hòa', '1234965137', '0856865245', 'Ha Noi', 'minhpq@gmail.com', 'Đã kết hôn', 'Kinh', 'SV003', '2020-07-07', 'Khánh Hòa', 'SV401658965', '118046701', 'none_image_profile'),
-('MNV36', 'NV', 'MPB03', 900000, 'Nam', 'HDMNV36', 'Nguyễn Quang Minh', '2002-11-30', 'Thái Bình', '1262596315', '0558466648', 'Ha Noi', 'nqm@gmail.com', 'Độc thân', 'Kinh', 'None', '2020-07-07', 'Thái Bình', 'SV401658583', '118124001', 'none_image_profile');
+('MNN00', 'NV', 'MPB05', 1300000, 'Nam', 'MHDMN11', 'Nguyễn Quang Huy', '2004-12-12', 'Đại Từ - Thái Nguyên', '019204211633', '0335698741', 'Hà Đông - Hà Nội', 'nguyenquanghuy@gmail.com', 'Độc thân', 'Kinh', 'SV002', '2021-03-10', 'Đại từ', 'SV40101206185', '0118059003', 'none_image_profile'),
+('MNV01', 'TTS', 'MPB01', 1000000, 'Nam', 'MHD01', 'Hoàng Huy Phong', '2004-01-07', 'Hiệp Hòa - Bắc Giang', '001215387168', '0877625245', 'Hiệp Hòa - Bắc Giang', 'phonghh@gmail.com', 'Độc thân', 'Kinh', 'SV001', '2021-11-30', 'Hiệp Hòa - Bắc Giang', 'SV40101238294', '0118128311', 'Image_Profile_MNV01'),
+('MNV02', 'TTS', 'MPB02', 1000000, 'Nam', 'MHD02', 'Nguyễn Minh Nam', '2004-11-28', 'Hà Tây', '001202035197', '0945549876', 'Hà Đông - Hà Nội', 'namnm@gmail.com', 'Độc thân', 'Kinh', 'SV001', '2021-08-03', 'Hà Nội', 'SV401985718', '0118157171', 'Image_Profile_MNV02'),
+('MNV03', 'TTS', 'MPB01', 1000000, 'Nam', 'MHD03', 'Phạm Văn Doanh', '2003-04-04', 'Phú Thọ', '123456789', '0822655245', '36 Vũ Trọng Phụng, Thanh Xuân Trung, Thanh Xuân, Hà Nội', 'doanhph@gmail.com', 'Đã kết hôn', 'Kinh', 'SV001', '2020-12-12', 'Phú Thọ', 'SV40101135729', '0811002892', 'Image_Profile_MNV03'),
+('MNV04', 'GD', 'PBGD', 10000000, 'Nam', 'MHD04', 'Phùng Khánh Linh', '1994-08-05', 'Bắc Giang', '000827826195', '0877865245', 'Bắc Giang', 'pkl@gmail.com', 'Độc thân', 'Kinh', 'TS001', '2005-10-10', 'Bắc Giang', '', '', 'Image_Profile_MNV04'),
+('MNV05', 'TP', 'MPB02', 900000, 'Nam', 'MHD05', 'Hoàng Anh Khoa', '2004-10-01', 'Đan Phượng - Hà Nội', '001297385197', '0877265456', 'Đan Phượng - Hà Nội', 'khoaha@gmail.com', 'Độc thân', 'Kinh', 'SV001', '2020-03-03', 'Đan Phượng', '', '', 'none_image_profile'),
+('MNV06', 'NV', 'MPB03', 1500000, 'Nam', 'MHD06', 'Đặng Minh Khôi', '2004-05-05', 'Hoài Đức - Hà Nội', '123456789', '0556276648', 'Hoài Đức - Hà Nội', 'khoidm@gmail.com', 'Độc thân', 'Kinh', 'SV001', '2020-08-09', 'Hoài Đức', '', '', 'none_image_profile'),
+('MNV07', 'NV', 'MPB03', 0.15, 'Nữ', 'MHD07', 'Trần Minh Khôi', '2004-08-05', '', '123456789', '0655745341', 'Ha Noi', 'khoi1@gmail.com', 'Độc thân', 'Kinh', 'SV002', NULL, NULL, '', '', 'none_image_profile'),
+('MNV08', 'NV', 'MPB02', 700000, 'Nữ', 'MHD08', 'Nguyễn Minh Khôi', '2004-09-09', '', '123456789', '0877567893', 'Hà Nội', 'khoi2@gmail.com', 'Độc thân', 'Kinh', 'SV002', '2019-05-03', 'Bắc Giang', '', '', 'none_image_profile'),
+('MNV10', 'NV', 'MPB01', 20000000, 'Nam', 'HDMNV10', 'Lê Minh Khôi', '2004-12-12', 'Thôn Xuân Tân - Xuân Hưng - Thọ Xuân - Thanh Hoá  - Việt Nam', '001206064297', '0916578134', 'Hà Đông - Hà Nội', 'khoi@gmail.com', 'Độc thân', 'Kinh', 'SV002', '2020-03-18', 'Thọ Xuân', 'SV40101208765', '0118000001', 'none_image_profile'),
+('MNV12', 'NV', 'MPB05', 1000000, 'Nam', 'HDMNV12', 'Trần Anh Khoa', '2024-02-14', 'Đồng Họa - Xã Vạn Hòa - Huyện Nông Cống - Thanh Hóa', '001234957163', '0945875315', 'Hà Đông - Hà Nội', 'khoa@gmail.com', 'Độc thân', 'Kinh', 'SV001', '2019-04-05', 'Thanh Hóa', 'SV401975831', '0118648251', 'none_image_profile'),
+('MNV24', 'NV', 'MPB02', 950000, 'Nam', 'HDMNV24', 'Phan Quang Huy', '2004-07-07', 'Khánh Hòa', '1234965137', '0856865245', 'Ha Noi', 'huy@gmail.com', 'Đã kết hôn', 'Kinh', 'SV003', '2020-07-07', 'Khánh Hòa', 'SV401658965', '118046701', 'none_image_profile'),
+('MNV36', 'NV', 'MPB03', 900000, 'Nam', 'HDMNV36', 'Nguyễn Quang Trung', '1000-11-30', 'Thái Bình', '1262596315', '0558466648', 'Ha Noi', 'trung@gmail.com', 'Độc thân', 'Kinh', 'None', '2020-07-07', 'Thái Bình', 'SV401658583', '118124001', 'none_image_profile');
 
 --
 -- Triggers `qlnv_nhanvien`
@@ -587,9 +588,9 @@ CREATE TABLE `qlnv_phanquyenuser` (
 INSERT INTO `qlnv_phanquyenuser` (`id_user`, `role_id`) VALUES
 (1, 1),
 (2, 3),
+(5, 2),
 (7, 3),
 (8, 1),
-(10, 2),
 (11, 3);
 
 -- --------------------------------------------------------
@@ -612,11 +613,11 @@ CREATE TABLE `qlnv_phongban` (
 
 INSERT INTO `qlnv_phongban` (`MaPB`, `TenPB`, `diachi`, `sodt`, `MaTruongPhong`) VALUES
 ('MPB01', 'Marketing', 'Thanh Xuân - Hà Nội', '096358469', 'MNV10'),
-('MPB02', 'Công nghệ thông tin', 'HCM', '096358465', 'MNV24'),
+('MPB02', 'Công nghệ thông tin', 'Hà Đông - Hà Nội', '096358465', 'MNV24'),
 ('MPB03', 'Kế toán', 'Hà Nội', '096358461', 'MNV36'),
 ('MPB04', 'Kiểm toán', 'Hà Nội', '096358467', 'MNN01'),
 ('MPB05', 'Hành chính', 'Hà Nội', '096358468', 'MNV12'),
-('PBGD', 'Quản lý', '502T5 Trường Đại học Khoa học Tự nhiên', '0978836792', 'MNV04');
+('PBGD', 'Quản lý', 'Học Viện Công Nghệ Bưu Chính Viễn Thông', '0978836792', 'MNV04');
 
 -- --------------------------------------------------------
 
@@ -659,21 +660,21 @@ CREATE TABLE `qlnv_thoigiancongtac` (
 --
 
 INSERT INTO `qlnv_thoigiancongtac` (`id`, `MaNV`, `MaCV`, `NgayNhanChuc`, `NgayKetThuc`, `DuongNhiem`) VALUES
-(1, 'MNN01', 'NV', '2022-12-13', NULL, 1),
-(2, 'MNN01', 'TTS', '2022-11-01', '2022-12-13', 0),
-(3, 'MNV01', 'TTS', '2022-10-01', NULL, 1),
-(4, 'MNV02', 'TTS', '2022-11-02', NULL, 1),
-(5, 'MNV03', 'TTS', '2022-11-02', NULL, 1),
-(6, 'MNV04', 'GD', '2022-12-01', NULL, 1),
-(7, 'MNV05', 'TTS', '2022-12-01', NULL, 1),
-(8, 'MNV06', 'NV', '2022-10-04', NULL, 1),
-(9, 'MNV07', 'NV', '2022-10-04', NULL, 1),
-(10, 'MNV08', 'NV', '2022-10-10', NULL, 1),
-(11, 'MNV10', 'NV', '2022-12-13', NULL, 1),
-(12, 'MNV12', 'TTS', '2022-12-13', '2022-12-18', 0),
-(13, 'MNV24', 'NV', '2022-12-18', NULL, 1),
-(14, 'MNV36', 'NV', '2022-12-18', NULL, 1),
-(15, 'MNV12', 'NV', '2022-12-18', NULL, 1);
+(1, 'MNN01', 'NV', '2024-12-13', NULL, 1),
+(2, 'MNN01', 'TTS', '2024-11-01', '2024-12-13', 0),
+(3, 'MNV01', 'TTS', '2024-10-01', NULL, 1),
+(4, 'MNV02', 'TTS', '2024-11-02', NULL, 1),
+(5, 'MNV03', 'TTS', '2024-11-02', NULL, 1),
+(6, 'MNV04', 'GD', '2024-12-01', NULL, 1),
+(7, 'MNV05', 'TTS', '2024-12-01', NULL, 1),
+(8, 'MNV06', 'NV', '2024-10-04', NULL, 1),
+(9, 'MNV07', 'NV', '2024-10-04', NULL, 1),
+(10, 'MNV08', 'NV', '2024-10-10', NULL, 1),
+(11, 'MNV10', 'NV', '2024-12-13', NULL, 1),
+(12, 'MNV12', 'TTS', '2024-12-13', '2024-12-18', 0),
+(13, 'MNV24', 'NV', '2024-12-18', NULL, 1),
+(14, 'MNV36', 'NV', '2024-12-18', NULL, 1),
+(15, 'MNV12', 'NV', '2024-12-18', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -697,7 +698,7 @@ CREATE TABLE `qlnv_thuongphat` (
 
 INSERT INTO `qlnv_thuongphat` (`id`, `MaNV`, `Loai`, `LyDo`, `Tien`, `Ngay`, `GhiChu`) VALUES
 (3, 'MNV02', 0, 'Chăm chỉ làm việc tốt', 10000, '2022-12-18', 'Tốt'),
-(5, 'MNV03', 1, 'Yeu MY Linh', 10000, '2022-12-01', ':))'),
+(5, 'MNV03', 1, 'nhân viên ưu tú', 10000, '2022-12-01', ':))'),
 (6, 'MNV03', 0, ':))', 20000, '2022-12-02', ':))');
 
 --
@@ -899,12 +900,12 @@ CREATE TABLE `qlnv_user` (
 --
 
 INSERT INTO `qlnv_user` (`Id_user`, `username`, `password`, `tennguoidung`, `MaNhanVien`, `LastLogin`, `register`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrator', 'MNV02', '2022-12-25 21:13:00', '2022-12-01 14:57:45'),
-(2, 'namsiunhon', '827ccb0eea8a706c4c34a16891f84e7b', 'Lã Đức Nam', 'MNV02', '2022-12-25 21:12:41', '2022-12-01 14:57:59'),
-(7, 'nghiaphamhong', '827ccb0eea8a706c4c34a16891f84e7b', 'Pham Hong Nghia', 'MNV03', '2022-12-25 21:12:11', '2022-12-20 20:20:24'),
-(8, 'phamnhatvuong', '827ccb0eea8a706c4c34a16891f84e7b', 'Phạm Nhật Vượng', 'MNV04', '2022-12-21 21:18:20', '2022-12-21 14:43:39'),
-(10, 'letailinh', '827ccb0eea8a706c4c34a16891f84e7b', 'Lê Tài Linh', 'MNV10', '2022-12-22 07:58:14', '2022-12-21 22:27:34'),
-(11, 'duongnam', '827ccb0eea8a706c4c34a16891f84e7b', 'Dương Văn Nam', 'MNV01', '2022-12-25 20:49:02', '2022-12-25 20:48:52');
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Administrator', 'MNV02', '2024-12-25 21:13:00', '2024-12-01 14:57:45'), 
+(2, 'namnm', '827ccb0eea8a706c4c34a16891f84e7b', 'Nguyễn Minh Nam', 'MNV02', '2024-12-25 21:12:41', '2024-12-01 14:57:59'),
+(5, 'khoaha', '827ccb0eea8a706c4c34a16891f84e7b', 'Hoang Anh Khoa', 'MNV05', '2024-12-22 07:58:14', '2024-12-21 22:27:34'),
+(7, 'doanhpv', '827ccb0eea8a706c4c34a16891f84e7b', 'Pham Van Doanh', 'MNV03', '2024-12-25 21:12:11', '2024-12-20 20:20:24'),
+(8, 'pkl', '827ccb0eea8a706c4c34a16891f84e7b', 'Phùng Khánh Linh', 'MNV04', '2024-12-21 21:18:20', '2024-12-21 14:43:39'),
+(11, 'phonghh', '827ccb0eea8a706c4c34a16891f84e7b', 'Hoàng Huy Phong', 'MNV01', '2024-12-25 20:49:02', '2024-12-25 20:48:52');
 
 --
 -- Indexes for dumped tables

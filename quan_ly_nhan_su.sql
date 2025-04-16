@@ -543,7 +543,7 @@ CREATE TABLE `qlnv_nhanvien` (
 
 INSERT INTO `qlnv_nhanvien` (`MaNhanVien`, `MaChucVu`, `MaPhongBan`, `Luong`, `GioiTinh`, `MaHD`, `TenNV`, `NgaySinh`, `NoiSinh`, `SoCMT`, `DienThoai`, `DiaChi`, `Email`, `TTHonNhan`, `DanToc`, `MATDHV`, `NgayCMND`, `NoiCMND`, `BHYT`, `BHXH`, `ID_profile_image`) VALUES
 ('MNN00', 'NV', 'MPB05', 1300000, 'Nam', 'MHDMN11', 'Nguyễn Quang Huy', '2004-12-12', 'Đại Từ - Thái Nguyên', '019204211633', '0335698741', 'Hà Đông - Hà Nội', 'nguyenquanghuy@gmail.com', 'Độc thân', 'Kinh', 'SV002', '2021-03-10', 'Đại từ', 'SV40101206185', '0118059003', 'none_image_profile'),
-('MNV01', 'TTS', 'MPB01', 1000000, 'Nam', 'MHD01', 'Hoàng Huy Phong', '2004-01-07', 'Hiệp Hòa - Bắc Giang', '001215387168', '0877625245', 'Hiệp Hòa - Bắc Giang', 'phonghh@gmail.com', 'Độc thân', 'Kinh', 'SV001', '2021-11-30', 'Hiệp Hòa - Bắc Giang', 'SV40101238294', '0118128311', 'Image_Profile_MNV01'),
+('MNV01', 'TTS', 'MPB01', 1000000, 'Nam', 'MHD01', 'Nguyễn Thanh Tùng', '2004-01-07', 'Hiệp Hòa - Bắc Giang', '001215387168', '0877625245', 'Hiệp Hòa - Bắc Giang', 'tungnt@gmail.com', 'Độc thân', 'Kinh', 'SV001', '2021-11-30', 'Hiệp Hòa - Bắc Giang', 'SV40101238294', '0118128311', 'Image_Profile_MNV01'),
 ('MNV02', 'TTS', 'MPB02', 1000000, 'Nam', 'MHD02', 'Nguyễn Minh Nam', '2004-11-28', 'Hà Tây', '001202035197', '0945549876', 'Hà Đông - Hà Nội', 'namnm@gmail.com', 'Độc thân', 'Kinh', 'SV001', '2021-08-03', 'Hà Nội', 'SV401985718', '0118157171', 'Image_Profile_MNV02'),
 ('MNV03', 'TTS', 'MPB01', 1000000, 'Nam', 'MHD03', 'Phạm Văn Doanh', '2003-04-04', 'Phú Thọ', '123456789', '0822655245', '36 Vũ Trọng Phụng, Thanh Xuân Trung, Thanh Xuân, Hà Nội', 'doanhph@gmail.com', 'Đã kết hôn', 'Kinh', 'SV001', '2020-12-12', 'Phú Thọ', 'SV40101135729', '0811002892', 'Image_Profile_MNV03'),
 ('MNV04', 'GD', 'PBGD', 10000000, 'Nam', 'MHD04', 'Phùng Khánh Linh', '1994-08-05', 'Bắc Giang', '000827826195', '0877865245', 'Bắc Giang', 'pkl@gmail.com', 'Độc thân', 'Kinh', 'TS001', '2005-10-10', 'Bắc Giang', '', '', 'Image_Profile_MNV04'),
@@ -905,7 +905,7 @@ INSERT INTO `qlnv_user` (`Id_user`, `username`, `password`, `tennguoidung`, `MaN
 (5, 'khoaha', '827ccb0eea8a706c4c34a16891f84e7b', 'Hoang Anh Khoa', 'MNV05', '2024-12-22 07:58:14', '2024-12-21 22:27:34'),
 (7, 'doanhpv', '827ccb0eea8a706c4c34a16891f84e7b', 'Pham Van Doanh', 'MNV03', '2024-12-25 21:12:11', '2024-12-20 20:20:24'),
 (8, 'pkl', '827ccb0eea8a706c4c34a16891f84e7b', 'Phùng Khánh Linh', 'MNV04', '2024-12-21 21:18:20', '2024-12-21 14:43:39'),
-(11, 'phonghh', '827ccb0eea8a706c4c34a16891f84e7b', 'Hoàng Huy Phong', 'MNV01', '2024-12-25 20:49:02', '2024-12-25 20:48:52');
+(11, 'tungtn', '827ccb0eea8a706c4c34a16891f84e7b', 'Nguyễn Thanh Tùng', 'MNV01', '2024-12-25 20:49:02', '2024-12-25 20:48:52');
 
 --
 -- Indexes for dumped tables

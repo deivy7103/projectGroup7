@@ -699,6 +699,7 @@ def delete_nhan_vien(maNV):
 # ------------------ Trình độ học vấn ------------------------
 #
 @login_required
+@login_required
 @app.route("/form_add_trinhdohocvan", methods=['GET','POST'])
 def form_add_trinhdohocvan():
     if session['role_id'] != 1:
@@ -714,7 +715,7 @@ def form_add_trinhdohocvan():
         TenTDHV = details["TenTDHV"].strip()
         ChuyenNganh = details['ChuyenNganh'].strip()
         for data in trinhdohocvan:
-            if (MATDHV in data):
+            if any(MATDHV == row[0] for row in trinhdohocvan):
                 return render_template(session['role'] +"form_add_trinhdohocvan.html", 
                                        ma_err = "True", 
                                        congty = session['congty'],

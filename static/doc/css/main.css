@@ -16592,6 +16592,10 @@ be a descendant of the grid when it is being dragged.
 
 }
 
+#clock {
+  display: none !important;
+}
+
 .man--hinh {
   background-color: white;
   padding: 10px;

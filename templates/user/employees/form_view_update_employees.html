@@ -154,7 +154,7 @@
   <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
   <aside class="app-sidebar">
     <div class="app-sidebar__user"><img class="app-sidebar__user-avatar"
-        src="{{ url_for('static', filename='web/img/avt.png') }}" style="border-radius: 50%;" width="50px" alt="User Image">
+        src="{{ url_for('static', filename=my_user[7]) }}" style="border-radius: 50%;" width="50px" alt="User Image">
       <div>
         <p class="app-sidebar__user-name"><b>{{my_user[3]}}</b></p>
         <p class="app-sidebar__user-designation">Chào mừng bạn trở lại</p>
@@ -185,6 +185,7 @@
         <li class="breadcrumb-item"><a href="/form_view_update_employees/{{my_user[4]}}_N">Thông tin cá nhân</a></li>
         <li class="breadcrumb-item active"> <a href="">Xem - sửa thông tin </a></li>
       </ul>
+      <div id="clock"></div>
     </div>
     <div class="row">
       <div class="col-md-12">
@@ -341,7 +342,7 @@
                     <div style="text-align: center;">
                       <img id="img-upload">
                       <div id="tem_img">
-                        <img id="id_img_profile" src="{{ url_for('static', filename='web/img/avt.png')}}" alt="Ảnh"
+                        <img id="id_img_profile" src="{{ url_for('static', filename=data_default[14])}}" alt="Ảnh"
                           width="170px" height="170px">
                         <a class="removeimg" href="javascript:"></a>
                       </div><br>

@@ -1000,20 +1000,24 @@ def get_table_trinh_do_hoc_van_nhan_vien_pdf(maTDHV):
 def table_chuc_vu():
     if session['role_id'] != 1:
         abort(404)
+
     cur = mysql.connection.cursor()
+
+    # Truy vấn lấy MaCV, TenCV và đếm số lượng nhân viên đang giữ chức vụ đó
     cur.execute("""
-        SELECT cv.MaCV, cv.TenCV, COUNT(NV.MaNhanVien) 
+        SELECT cv.MaCV, cv.TenCV, COUNT(nv.MaNhanVien) 
         FROM qlnv_chucvu cv
         LEFT JOIN qlnv_nhanvien nv ON cv.MaCV = nv.MaChucVu
-        LEFT JOIN qlnv_thoigiancongtac tg ON tg.MaNV = nv.MaNhanVien
-        WHERE tg.DuongNhiem = 1 
-        GROUP BY cv.MaCV""")
+        GROUP BY cv.MaCV
+    """)
+
     chucvu = cur.fetchall()
     cur.close()
-    return render_template(session['role'] +"chucvu/table_chuc_vu.html",
-                           chucvu = chucvu,
-                           congty = session['congty'],
-                           my_user = session['username'])
+
+    return render_template(session['role'] + "chucvu/table_chuc_vu.html",
+                           chucvu=chucvu,
+                           congty=session['congty'],
+                           my_user=session['username'])
     
 @login_required
 @app.route("/form_view_update_chuc_vu/<string:mode>_<string:maCV>", methods=['GET','POST'])

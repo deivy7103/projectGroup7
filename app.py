@@ -3166,9 +3166,9 @@ def get_danh_sach_hop_dong_excel():
     hopdong = cur.fetchall()
     
     column_name = ['id','MaHopDong' ,'LoaiHopDong', 'NgayBatDau', 'NgayKetThuc', 'GhiChu']
-    data = pd.DataFrame.from_records(hopdong, columns=column_name)
+    data = pd.DataFrame.from_records(hopdong, columns=column_name) # dùng thư viện pandas để tạo datafraem từ dữ liệu
     data = data.set_index('id')
-    pathFile = app.config['SAVE_FOLDER_EXCEL'] + "/Danh_sach_hop_dong.xlsx"
+    pathFile = app.config['SAVE_FOLDER_EXCEL'] + "/Danh_sach_hop_dong.xlsx" #lưu tạm
     data.to_excel(pathFile)
     return send_file(pathFile, as_attachment=True)
 
@@ -3287,14 +3287,14 @@ def view_data_money(maNV):
                 """, (session['username'][4], session['username'][4]))
     else:
         cur.execute("""
-                SELECT l.id,  l.Thang, l.Nam, tk.SoNgayDiLam, tk.SoNgayDiVang,
-                tk.SoNgayTangCa, l.LuongCoDinh, l.LuongChamCong,
-                l.SoTienPhat, l.SoTienThuong, l.TongSoTien
-                    FROM qlnv_luong l
-                    JOIN qlnv_chamcongtongketthang tk ON tk.Nam = l.Nam AND tk.Thang = l.Thang
-                    WHERE l.MaNV = %s AND tk.MaNhanVien = %s
-                    ORDER BY l.Nam DESC, l.Thang DESC
-                    """, (maNV, maNV))
+            SELECT l.id,  l.Thang, l.Nam, tk.SoNgayDiLam, tk.SoNgayDiVang,
+            tk.SoNgayTangCa, l.LuongCoDinh, l.LuongChamCong,
+            l.SoTienPhat, l.SoTienThuong, l.TongSoTien
+                FROM qlnv_luong l
+                JOIN qlnv_chamcongtongketthang tk ON tk.Nam = l.Nam AND tk.Thang = l.Thang
+                 WHERE l.MaNV = %s AND tk.MaNhanVien = %s
+                ORDER BY l.Nam DESC, l.Thang DESC
+                """, (maNV, maNV))
     luong = cur.fetchall()
     
     
@@ -3451,7 +3451,7 @@ def form_tao_tk():
         details = request.form
         username = details['taikhoan']
         MNV = details['MNV']
-        type = type_account[details['TYPE']]
+        type = type_account[details['TYPE']]  # dùng md5 để hash mật khẩu
         password = hashlib.md5(details['password'].encode()).hexdigest()
         password_repeat = hashlib.md5(details['password_repeat'].encode()).hexdigest()
     
@@ -3514,8 +3514,8 @@ def form_tao_tk():
                     FROM qlnv_user
                     WHERE username = %s
                     """, (username, ))
-        acc_id = cur.fetchall()[0][0]
-        
+        acc_id = cur.fetchall()[0][0] #lấy id vừa tạo
+        # gán quyền
         cur.execute("""
                     INSERT INTO qlnv_phanquyenuser(id_user, role_id)
                     VALUES (%s, %s)
@@ -3566,7 +3566,7 @@ def form_view_tk():
         index = 0
         tmp_data = []
         for info in elm:
-            if (index != 2):
+            if (index != 2): # Ẩn mật khẩu (vị trí thứ 2 trong tuple)
                 tmp_data.append(info)
             index += 1
         data_user_format.append(tmp_data)
@@ -3726,7 +3726,7 @@ def page_not_found(error):
 @app.errorhandler(500)
 def no_role_access(error):
     return render_template('error.html',
-                           error = error), 404
+                           error = error), 500
 
 def take_image_to_save(id_image, path_to_img):
     cur = mysql.connection.cursor()

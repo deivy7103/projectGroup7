@@ -20,7 +20,7 @@ import pdfkit
 import re
 
 app = Flask(__name__)
-app.secret_key = 'la nam'
+app.secret_key = 'minh nam'
 
 UPLOAD_FOLDER = 'static/web'
 UPLOAD_FOLDER_IMG = 'static/web/img'
@@ -1477,7 +1477,7 @@ def table_cham_cong_tong_ket_thang(maNV,year):
     if (len(tenNV) == 0):
         abort(404)
     
-    tenNV = tenNV[0][0]
+    tenNV = tenNV[0][0] #lấy giá trị tnv ra khỏi tuple để hiển thịthị
     if session['role_id'] != 1:
         cur.execute("""
                     SELECT * 
@@ -1585,7 +1585,8 @@ def get_cham_cong_tong_ket_thang_pdf(maNV,year):
 @login_required
 @app.route("/table_cham_cong_ngay_trong_thang/<string:maNV>_<string:year>_<string:month>")
 def table_cham_cong_ngay_trong_thang(maNV,year,month):
-    sql = """
+    #tạo câu hỏi sql
+    sql = """ 
         SELECT * 
         FROM qlnv_chamcong cc 
         WHERE YEAR(cc.Ngay) = %s AND MONTH(cc.Ngay) = %s AND MaNV = %s
